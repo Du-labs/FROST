@@ -1,0 +1,23 @@
+[33mcommit 1861fd39a8a456c99f44e2033b7bb4c9c6c31d41[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: MSGB1 <sohangowda59@gmail.com>
+Date:   Tue Apr 18 11:24:42 2023 +0530
+
+    state machine finalization
+
+[33mcommit 80ec3fd55f316b5522c0666a38a2acaefb070643[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: mallinath <mallinath111>
+Date:   Fri Apr 14 14:29:31 2023 +0530
+
+    time buzzer
+
+[33mcommit c75c002933652157f38ac2fe6c025b9eace6cbd8[m
+Author: MSGB1 <sohangowda59@gmail.com>
+Date:   Fri Apr 14 12:06:13 2023 +0530
+
+    state machine diagram
+
+[33mcommit c0949b1edef23fe638779a0ca6a814d5b5334f4e[m
+Author: Du-labs <duxescourse@gmail.com>
+Date:   Wed Apr 5 08:20:10 2023 +0530
+
+    first commit
