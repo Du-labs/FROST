@@ -26,6 +26,7 @@ uint8_t state = 1;
 
 unsigned long current_time = millis(), time, previous_drink_time = 0, previous_place_time = 0, previous_clean_time = 0, previous_inactive_time = 0;
 unsigned long elapsed_drink_time, elapsed_clean_time, elapsed_place_time;
+unsigned long elapsed_drink_time1, elapsed_clean_time1, elapsed_place_time1;
 uint8_t flag = 1;
 
 enum state
@@ -75,7 +76,9 @@ void loop() {
       if (Warning_type == 1 && flag == 1) {
         elapsed_drink_time = current_time - previous_drink_time;
         Serial.print("elapsed time = ");
+        elapsed_drink_time1 = elapsed_drink_time / 1000;
         Serial.print(elapsed_drink_time);
+        Serial.print("seconds");
         previous_drink_time = current_time;
         Serial.println("| DRINK_WATER |");
         drink_water_mode();
@@ -83,7 +86,9 @@ void loop() {
       } else if (Warning_type == 2 && flag == 1) {
         elapsed_clean_time = current_time - previous_clean_time;
         Serial.print("elapsed time = ");
+        elapsed_clean_time1 = elapsed_clean_time / 1000;
         Serial.print(elapsed_clean_time);
+        Serial.print("seconds");
         previous_clean_time = current_time;
         Serial.println("| CLEAN_BOTTLE |");
         clean_bottle_mode();
@@ -91,7 +96,9 @@ void loop() {
       } else if (Warning_type == 3 && flag == 1) {
         elapsed_place_time = current_time - previous_place_time;
         Serial.print("elapsed time = ");
+        elapsed_place_time1 = elapsed_place_time / 1000;
         Serial.print(elapsed_place_time);
+        Serial.print("seconds");
         previous_place_time = current_time;
         Serial.println("| PLACE_BOTTLE |");
         place_bottle_mode();
