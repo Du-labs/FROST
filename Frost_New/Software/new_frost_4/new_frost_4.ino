@@ -15,10 +15,10 @@ unsigned char Warning_type = 0;
 uint8_t state = 1;
 
 // Define time intervals (in milliseconds)
-#define DRINK_INTERVAL    10000 // 10 seconds
-#define CLEAN_INTERVAL    10000 // 20 seconds
-#define PLACE_INTERVAL    15000 // 30 seconds
-#define INACTIVE_INTERVAL 5000 // 10 seconds
+#define DRINK_INTERVAL    120000 // 2hours
+#define CLEAN_INTERVAL    480000 // 8hours
+#define PLACE_INTERVAL    120000//  2hours
+#define INACTIVE_INTERVAL 60000 //  1hour
 
 //define high and low
 #define LOW 0
@@ -76,9 +76,9 @@ void loop() {
       if (Warning_type == 1 && flag == 1) {
         elapsed_drink_time = current_time - previous_drink_time;
         Serial.print("elapsed time = ");
-        elapsed_drink_time1 = elapsed_drink_time / 1000;
+        elapsed_drink_time1 = elapsed_drink_time / 60000;
         Serial.print(elapsed_drink_time);
-        Serial.print("seconds");
+        Serial.print("hours");
         previous_drink_time = current_time;
         Serial.println("| DRINK_WATER |");
         drink_water_mode();
@@ -86,9 +86,9 @@ void loop() {
       } else if (Warning_type == 2 && flag == 1) {
         elapsed_clean_time = current_time - previous_clean_time;
         Serial.print("elapsed time = ");
-        elapsed_clean_time1 = elapsed_clean_time / 1000;
+        elapsed_clean_time1 = elapsed_clean_time / 60000;
         Serial.print(elapsed_clean_time);
-        Serial.print("seconds");
+        Serial.print("hours");
         previous_clean_time = current_time;
         Serial.println("| CLEAN_BOTTLE |");
         clean_bottle_mode();
@@ -96,9 +96,9 @@ void loop() {
       } else if (Warning_type == 3 && flag == 1) {
         elapsed_place_time = current_time - previous_place_time;
         Serial.print("elapsed time = ");
-        elapsed_place_time1 = elapsed_place_time / 1000;
+        elapsed_place_time1 = elapsed_place_time / 60000;
         Serial.print(elapsed_place_time);
-        Serial.print("seconds");
+        Serial.print("hours");
         previous_place_time = current_time;
         Serial.println("| PLACE_BOTTLE |");
         place_bottle_mode();
